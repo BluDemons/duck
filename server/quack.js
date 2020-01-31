@@ -1,6 +1,9 @@
 class QuackBehavior {
     quack() {
-        console.log('volar');
+        console.log('decir quack');
+    }
+    squak() {
+        console.log('no se que es squak');
     }
 }
 

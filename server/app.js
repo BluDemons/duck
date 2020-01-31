@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const duck = require('./ejemplo');
+const Duck = require('./pato');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -11,9 +11,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', (req, res) => {
-    res.send(duck);
+    res.send('hola')
 });
-app.get('/Fly', (req, res) => {});
+app.get('/Fly', (req, res) => {
+    const mallard = new Duck();
+    res.send(mallard.performFly().fly());
+    res.send(mallard.performFly().FlyWithWings());
+    res.send(mallard.performFly().FlyNoWay());
+});
 
 app.listen(port, () => {
     console.log(`Running on port ${port}`);

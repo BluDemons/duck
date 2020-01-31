@@ -2,34 +2,35 @@ const express = require('express');
 const router = express.Router();
 const FlyBehaivor = require('./fly');
 const QuackBehaivor = require('./quack');
+const flyBehavior = new FlyBehaivor();
+const quackBehaivor = new QuackBehaivor();
 
 class Duck {
     constructor() {
-        this.flyBehavior = FlyBehaivor;
-        this.quackBehaivor = QuackBehaivor;
+        this.flyBehavior = flyBehavior;
+        this.quackBehaivor = quackBehaivor;
     };
 
     display() {
         console.log('')
     };
     performFly() {
-        //return this.flyBehaivor.fly();
+        return flyBehavior;
     }
     performQuack() {
-        //this.quackBehaivor.quack();
+        return quackBehaivor;
     }
     swim() {
         console.log('puedo nadar');
     }
-    setFlyBehavior(FlyBehavior) {
-        console.log('puedo nadar');
+    setFlyBehavior() {
+        return flyBehavior;
     }
     setQuackBehavior(QuackBehavior) {
-        console.log('puedo volar');
+        return quackBehaivor;
     }
 }
 const mallard = new Duck();
-mallard.setFlyBehavior();
-mallard.setQuackBehavior();
+
 
 module.exports = Duck;

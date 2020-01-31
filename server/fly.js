@@ -3,10 +3,10 @@ class FlyBehavior {
         console.log('volar');
     }
     FlyWithWings() {
-        console.log('I’ m flying!!');
+        console.log('ESTOY VOLANDO!!!');
     }
     FlyNoWay() {
-        console.log('I can’ t fly');
+        console.log('No puedo volar');
     }
 }
 
