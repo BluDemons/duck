@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const Duck = require('./pato');
+const patos = require('./patosModelos');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -14,10 +15,10 @@ app.get('/', (req, res) => {
     res.send('hola')
 });
 app.get('/Fly', (req, res) => {
-    const mallard = new Duck();
-    res.send(mallard.performFly().fly());
-    res.send(mallard.performQuack().quack());
-    res.send(mallard.performFly().FlyNoWay());
+    const mallard = new patos();
+    const patoCaucho = new patos();
+    res.send(mallard.patoMallard());
+    res.send(patoCaucho.patoCaucho());
 });
 
 app.listen(port, () => {
