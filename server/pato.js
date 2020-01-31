@@ -26,7 +26,7 @@ class Duck {
     setFlyBehavior() {
         return flyBehavior;
     }
-    setQuackBehavior(QuackBehavior) {
+    setQuackBehavior() {
         return quackBehaivor;
     }
 }
