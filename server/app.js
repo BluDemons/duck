@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const Duck = require('./pato');
 const patos = require('./patosModelos');
 
 const app = express();
